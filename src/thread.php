@@ -12,7 +12,8 @@
 	$handle_name = $_SESSION[handle_name];
 	$user_id = $_SESSION['user_id'];
 
-	$question_id = $_POST['question_id'];
+	$question_id = isset($_POST['question_id']) ? $_POST['question_id'] : $_SESSION['question_id'];
+	$_SESSION['question_id'] = $question_id;
 
 	// DB接続
 	require_once("db.php");

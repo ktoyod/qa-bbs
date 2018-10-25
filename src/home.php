@@ -9,6 +9,8 @@
 		exit();
 	}
 
+    $_SESSION['question_id'] = '';
+
 	$handle_name = $_SESSION[handle_name];
 
 	// DB接続
@@ -166,9 +168,6 @@
             <!-- ここからmain -->
             <main class="mdl-layout__content mdl-layout__header--scroll">
 				<div class="page-content">
-					こんにちは、<?= $handle_name?>さん。<br>
-                    あなたのIDは<?= $user_id?>です。<br>
-                    <hr>
 	                <!-- 自分が関わっているなスレッドを表示 -->
 					<?php if ($my_threads): ?>
 					<h3>Your Threads</h3>

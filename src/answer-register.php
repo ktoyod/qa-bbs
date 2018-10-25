@@ -22,7 +22,7 @@
         // POSTされたデータを各変数に入れる
 		$id = isset($_POST['id']) ? $_POST['id'] : NULL;
 		$comment = isset($_POST['comment']) ? $_POST['comment'] : NULL;
-		$question_id = isset($_POST['question_id']) ? $_POST['question_id'] : NULL;
+		$question_id = isset($_SESSION['question_id']) ? $_SESSION['question_id'] : NULL;
 	}
 
 	// ここでデータベースに登録する

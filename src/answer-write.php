@@ -11,7 +11,7 @@
 
 	$handle_name = $_SESSION[handle_name];
 
-	$question_id = $_POST['question_id'];
+	$question_id = $_SESSION['question_id'];
 	$id = isset($_POST['id']) ? $_POST['id'] : NULL;
 	$comment = isset($_POST['comment']) ? $_POST['comment'] : NULL;
 

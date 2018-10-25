@@ -9,6 +9,8 @@
 		exit();
 	}
 
+    $_SESSION['question_id'] = '';
+
 	$handle_name = $_SESSION['handle_name'];
 	$mission = 'Mission4';
 

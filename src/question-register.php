@@ -23,7 +23,7 @@
 		$title = isset($_POST['title']) ? $_POST['title'] : NULL;
 		$mission = isset($_POST['mission']) ? $_POST['mission'] : NULL;
 		$content = isset($_POST['content']) ? $_POST['content'] : NULL;
-		$question_id = isset($_POST['question_id']) ? $_POST['question_id'] : NULL;
+		$question_id = isset($_SESSION['question_id']) ? $SESSION['question_id'] : NULL;
 	}
 
 	// ここでデータベースに登録する
