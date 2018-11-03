@@ -62,7 +62,6 @@
 	    // メールの宛先
 	    $mailTo = $mail;
 
-	    // TODO: Return-Pathに指定するメールアドレス
 	    $returnMail = 'web@sample.com';
 
 	    $page_name = "TECH BBS";

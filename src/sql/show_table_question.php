@@ -31,7 +31,7 @@
                         date DATETIME NOT NULL,
                         good INT NOT NULL DEFAULT 0,
                         bad INT NOT NULL DEFAULT 0,
-                        mission VARCHAR(32) NOT NULL,
+                        category VARCHAR(32) NOT NULL,
                         user_id INT NOT NULL,
                         handle_name VARCHAR(128) NOT NULL
                         )ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
@@ -70,7 +70,7 @@
 			echo "<th align='left'>date</th>";
 			echo "<th align='left'>good</th>";
 			echo "<th align='left'>bad</th>";
-			echo "<th align='left'>mission</th>";
+			echo "<th align='left'>category</th>";
 			echo "<th align='left'>user_id</th>";
 			echo "<th align='left'>handle_name</th>";
 			echo "</tr>";
@@ -82,7 +82,7 @@
 	        	echo "<td>".$row['date']."</td>";
 	        	echo "<td>".$row['good']."</td>";
 	        	echo "<td>".$row['bad']."</td>";
-	        	echo "<td>".$row['mission']."</td>";
+	        	echo "<td>".$row['category']."</td>";
 	        	echo "<td>".$row['user_id']."</td>";
 	        	echo "<td>".$row['handle_name']."</td>";
 			    echo "</tr>";

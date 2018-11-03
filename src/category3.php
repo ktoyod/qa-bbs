@@ -12,7 +12,7 @@
     $_SESSION['question_id'] = '';
 
 	$handle_name = $_SESSION['handle_name'];
-	$mission = 'Mission1';
+	$category = 'category3';
 
 	// DB接続
 	require_once("db.php");
@@ -29,8 +29,8 @@
 		$pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 		// 新しい順 or 人気順で記事を検索
-		$display_threads = $pdo -> prepare("SELECT * FROM question WHERE mission=:mission");
-		$display_threads -> bindValue(':mission', $mission, PDO::PARAM_STR);
+		$display_threads = $pdo -> prepare("SELECT * FROM question WHERE category=:category");
+		$display_threads -> bindValue(':category', $category, PDO::PARAM_STR);
 		$display_threads -> execute();
 
 		// $display_threads = $statement -> fetch();
@@ -116,10 +116,10 @@
                 <span class="mdl-layout-title">TECH BBS</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="home.php">HOME</a>
-                    <a class="mdl-navigation__link" href="mission1.php">Mission1</a>
-                    <a class="mdl-navigation__link" href="mission2.php">Mission2</a>
-                    <a class="mdl-navigation__link" href="mission3.php">Mission3</a>
-                    <a class="mdl-navigation__link" href="mission4.php">Mission4</a>
+                    <a class="mdl-navigation__link" href="category1.php">category1</a>
+                    <a class="mdl-navigation__link" href="category2.php">category2</a>
+                    <a class="mdl-navigation__link" href="category3.php">category3</a>
+                    <a class="mdl-navigation__link" href="category4.php">category4</a>
                     <a class="mdl-navigation__link" href="others.php">Others</a>
                 </nav>
             </div>
@@ -127,7 +127,7 @@
             <!-- ここからmain -->
             <main class="mdl-layout__content">
 				<div class="page-content">
-					<h3>Mission1</h3>
+					<h3>category3</h3>
 	                
 	                <!-- 新しい or 人気なスレッドを表示 -->
 					<?php if ($display_threads): ?>
@@ -138,7 +138,7 @@
 					        <div class="question-card mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title">
 					        	    <h2 class="mdl-card__title-text"><?= $display_thread['title'] ?></h2>
-					        	    <h4 class="mdl-card__subtitle-text"><?= '@'.$display_thread['mission'] ?></h4>
+					        	    <h4 class="mdl-card__subtitle-text"><?= '@'.$display_thread['category'] ?></h4>
                                     <i class="mdl-card_subtitle-text material-icons">perm_identity</i>
 					        	    <h4 class="mdl-card__subtitle-text"><?= $display_thread['handle_name'] ?></h4>
                                 </div>

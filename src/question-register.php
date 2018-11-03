@@ -21,7 +21,7 @@
 	} else {
         // POSTされたデータを各変数に入れる
 		$title = isset($_POST['title']) ? $_POST['title'] : NULL;
-		$mission = isset($_POST['mission']) ? $_POST['mission'] : NULL;
+		$category = isset($_POST['category']) ? $_POST['category'] : NULL;
 		$content = isset($_POST['content']) ? $_POST['content'] : NULL;
 		$question_id = isset($_SESSION['question_id']) ? $SESSION['question_id'] : NULL;
 	}
@@ -39,11 +39,11 @@
     		// トランザクション開始
     		$pdo -> beginTransaction();
     
-    		$statement = $pdo -> prepare("INSERT INTO question (title, mission, content, user_id, handle_name, date) VALUES (:title, :mission, :content, :user_id, :handle_name, now())");
+    		$statement = $pdo -> prepare("INSERT INTO question (title, category, content, user_id, handle_name, date) VALUES (:title, :category, :content, :user_id, :handle_name, now())");
     
     		// プレースホルダへ実際の値を設定する
     		$statement -> bindValue(':title', $title, PDO::PARAM_STR);
-    		$statement -> bindValue(':mission', $mission, PDO::PARAM_STR);
+    		$statement -> bindValue(':category', $category, PDO::PARAM_STR);
     		$statement -> bindValue(':content', $content, PDO::PARAM_STR);
     		$statement -> bindValue(':user_id', $user_id, PDO::PARAM_INT);
     		$statement -> bindValue(':handle_name', $handle_name, PDO::PARAM_STR);
@@ -72,11 +72,11 @@
     		// トランザクション開始
     		$pdo -> beginTransaction();
     
-    		$statement = $pdo -> prepare("UPDATE question SET title=:title, mission=:mission, content=:content, date=now() WHERE id=:id");
+    		$statement = $pdo -> prepare("UPDATE question SET title=:title, category=:category, content=:content, date=now() WHERE id=:id");
     
     		// プレースホルダへ実際の値を設定する
     		$statement -> bindValue(':title', $title, PDO::PARAM_STR);
-    		$statement -> bindValue(':mission', $mission, PDO::PARAM_STR);
+    		$statement -> bindValue(':category', $category, PDO::PARAM_STR);
     		$statement -> bindValue(':content', $content, PDO::PARAM_STR);
     		$statement -> bindValue(':id', $question_id, PDO::PARAM_INT);
     		$statement -> execute();
@@ -152,8 +152,8 @@
 				    <b>TITLE</b><br>
                     <?= $title ?><br>
 					<br>
-				    <b>MISSION</b><br>
-                    <?= $mission ?><br>
+				    <b>category</b><br>
+                    <?= $category ?><br>
 					<br>
 				    <b>CONTENT</b><br>
                     <?= $content ?><br>

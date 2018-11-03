@@ -153,10 +153,10 @@
                 <span class="mdl-layout-title">TECH BBS</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="home.php">HOME</a>
-                    <a class="mdl-navigation__link" href="mission1.php">Mission1</a>
-                    <a class="mdl-navigation__link" href="mission2.php">Mission2</a>
-                    <a class="mdl-navigation__link" href="mission3.php">Mission3</a>
-                    <a class="mdl-navigation__link" href="mission4.php">Mission4</a>
+                    <a class="mdl-navigation__link" href="category1.php">category1</a>
+                    <a class="mdl-navigation__link" href="category2.php">category2</a>
+                    <a class="mdl-navigation__link" href="category3.php">category3</a>
+                    <a class="mdl-navigation__link" href="category4.php">category4</a>
                     <a class="mdl-navigation__link" href="others.php">Others</a>
                 </nav>
             </div>
@@ -169,7 +169,7 @@
 					    <div class="question-card mdl-card mdl-shadow--2dp">
                             <div class="mdl-card__title">
 					    	    <h2 class="mdl-card__title-text"><?= $thread_question['title'] ?></h2>
-					    	    <h4 class="mdl-card__subtitle-text"><?= '@'.$thread_question['mission'] ?></h4>
+					    	    <h4 class="mdl-card__subtitle-text"><?= '@'.$thread_question['category'] ?></h4>
                                 <i class="mdl-card_subtitle-text material-icons">perm_identity</i>
 					    	    <h4 class="mdl-card__subtitle-text"><?= $thread_question['handle_name'] ?></h4>
                             </div>
@@ -181,7 +181,7 @@
                                     <form action="question-write.php" method="POST">
                                         <input type="hidden" name="question_id" value="<?= $question_id ?>"
                                         <input type="hidden" name="title" value="<?= $thread_question['title'] ?>">
-                                        <input type="hidden" name="mission" value="<?= $thread_question['mission'] ?>">
+                                        <input type="hidden" name="category" value="<?= $thread_question['category'] ?>">
                                         <input type="hidden" name="content" value="<?= $thread_question['content'] ?>">
                                         <button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect">
                                             <i class="material-icons">edit</i>

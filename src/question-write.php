@@ -13,7 +13,7 @@
 
 	$question_id = isset($_POST['question_id']) ? $_POST['question_id'] : NULL;
 	$title = isset($_POST['title']) ? $_POST['title'] : NULL;
-	$mission = isset($_POST['mission']) ? $_POST['mission'] : NULL;
+	$category = isset($_POST['category']) ? $_POST['category'] : NULL;
 	$content = isset($_POST['content']) ? $_POST['content'] : NULL;
 
 	// クリックジャッキング対策
@@ -80,10 +80,10 @@
                 <span class="mdl-layout-title">TECH BBS</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="home.php">HOME</a>
-                    <a class="mdl-navigation__link" href="mission1.php">mission1</a>
-                    <a class="mdl-navigation__link" href="mission2.php">mission2</a>
-                    <a class="mdl-navigation__link" href="mission3.php">mission3</a>
-                    <a class="mdl-navigation__link" href="mission4.php">mission4</a>
+                    <a class="mdl-navigation__link" href="category1.php">category1</a>
+                    <a class="mdl-navigation__link" href="category2.php">category2</a>
+                    <a class="mdl-navigation__link" href="category3.php">category3</a>
+                    <a class="mdl-navigation__link" href="category4.php">category4</a>
                     <a class="mdl-navigation__link" href="others.php">Others</a>
                 </nav>
             </div>
@@ -100,12 +100,12 @@
                         </div>
 	                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
                             <div class="mdl-textfield mdl-js-textfield">
-    				    		<select name="mission" id="mission" class="mdl-textfield__input" value="<?= $mission ?>" required>
-                                <label for="mission" class="mdl-textfield__label">Mission</label>
-                                    <option>Mission1</option>
-                                    <option>Mission2</option>
-                                    <option>Mission3</option>
-                                    <option>Mission4</option>
+    				    		<select name="category" id="category" class="mdl-textfield__input" value="<?= $category ?>" required>
+                                <label for="category" class="mdl-textfield__label">category</label>
+                                    <option>category1</option>
+                                    <option>category2</option>
+                                    <option>category3</option>
+                                    <option>category4</option>
                                     <option>Others</option>
                                 </select>
                             </div>

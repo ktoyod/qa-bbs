@@ -85,10 +85,10 @@
                 <span class="mdl-layout-title">TECH BBS</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="home.php">HOME</a>
-                    <a class="mdl-navigation__link" href="mission1.php">mission1</a>
-                    <a class="mdl-navigation__link" href="mission2.php">mission2</a>
-                    <a class="mdl-navigation__link" href="mission3.php">mission3</a>
-                    <a class="mdl-navigation__link" href="mission4.php">mission4</a>
+                    <a class="mdl-navigation__link" href="category1.php">category1</a>
+                    <a class="mdl-navigation__link" href="category2.php">category2</a>
+                    <a class="mdl-navigation__link" href="category3.php">category3</a>
+                    <a class="mdl-navigation__link" href="category4.php">category4</a>
                     <a class="mdl-navigation__link" href="others.php">Others</a>
                 </nav>
             </div>

@@ -157,10 +157,10 @@
                 <span class="mdl-layout-title">TECH BBS</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="home.php">HOME</a>
-                    <a class="mdl-navigation__link" href="mission1.php">Mission1</a>
-                    <a class="mdl-navigation__link" href="mission2.php">Mission2</a>
-                    <a class="mdl-navigation__link" href="mission3.php">Mission3</a>
-                    <a class="mdl-navigation__link" href="mission4.php">Mission4</a>
+                    <a class="mdl-navigation__link" href="category1.php">category1</a>
+                    <a class="mdl-navigation__link" href="category2.php">category2</a>
+                    <a class="mdl-navigation__link" href="category3.php">category3</a>
+                    <a class="mdl-navigation__link" href="category4.php">category4</a>
                     <a class="mdl-navigation__link" href="others.php">Others</a>
                 </nav>
             </div>
@@ -178,7 +178,7 @@
 					        <div class="question-card mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title">
 					        	    <h2 class="mdl-card__title-text"><?= $my_thread['title'] ?></h2>
-					        	    <h4 class="mdl-card__subtitle-text"><?= '@'.$my_thread['mission'] ?></h4>
+					        	    <h4 class="mdl-card__subtitle-text"><?= '@'.$my_thread['category'] ?></h4>
                                     <i class="mdl-card_subtitle-text material-icons">perm_identity</i>
 					        	    <h4 class="mdl-card__subtitle-text"><?= $my_thread['handle_name'] ?></h4>
                                 </div>
@@ -208,7 +208,7 @@
 					        <div class="question-card mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title">
 					        	    <h2 class="mdl-card__title-text"><?= $display_thread['title'] ?></h2>
-					        	    <h4 class="mdl-card__title-text"><?= $display_thread['mission'] ?></h4>
+					        	    <h4 class="mdl-card__title-text"><?= $display_thread['category'] ?></h4>
                                     by
 					        	    <h4 class="mdl-card__title-text"><?= $display_thread['handle_name'] ?></h4>
                                 </div>
